@@ -117,7 +117,7 @@ CREATE TABLE Taken(
 
 CREATE TABLE LimitedCourse(
   code TEXT,
-  seats INTEGER,
+  seats NUMERIC CHECK (seats >= 0),
   FOREIGN KEY (code) REFERENCES Course(code),
   PRIMARY KEY (code)
 
@@ -126,7 +126,7 @@ CREATE TABLE LimitedCourse(
 CREATE TABLE WaitingList(
   student TEXT,
   course TEXT,
-  position INTEGER,
+  position NUMERIC CHECK (position > 0),
   FOREIGN KEY (student) REFERENCES Student(ssn),
   FOREIGN KEY (course) REFERENCES LimitedCourse(code),
   UNIQUE (position,course),
