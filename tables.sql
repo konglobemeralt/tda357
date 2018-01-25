@@ -96,4 +96,41 @@ FOREIGN KEY (branch,program) REFERENCES Branch(name,program),
 PRIMARY KEY (course, branch, program)
 );
 
+CREATE TABLE Registered(
+  student TEXT,
+  course TEXT,
+  FOREIGN KEY (student) REFERENCES Student(ssn),
+  FOREIGN KEY (course) REFERENCES Course(code),
+  PRIMARY KEY (student,course)
+);
+
+CREATE TYPE GRADE AS ENUM ('U','3','4','5');
+
+CREATE TABLE Taken(
+  student TEXT,
+  course TEXT,
+  grade GRADE,
+  FOREIGN KEY (student) REFERENCES Student(ssn),
+  FOREIGN KEY (course) REFERENCES Course(code),
+  PRIMARY KEY ( student,course)
+);
+
+CREATE TABLE LimitedCourse(
+  code TEXT,
+  seats INTEGER,
+  FOREIGN KEY (code) REFERENCES Course(code),
+  PRIMARY KEY (code)
+
+);
+
+CREATE TABLE WaitingList(
+  student TEXT,
+  course TEXT,
+  position INTEGER,
+  FOREIGN KEY (student) REFERENCES Student(ssn),
+  FOREIGN KEY (course) REFERENCES LimitedCourse(code),
+  UNIQUE (position,course),
+  PRIMARY KEY (student, course)
+
+);
 
