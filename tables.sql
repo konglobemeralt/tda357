@@ -20,6 +20,7 @@ PRIMARY KEY (department, program)
 
 CREATE TABLE Student(
 ssn TEXT NOT NULL PRIMARY KEY,
+name TEXT NOT NULL,
 program TEXT NOT NULL,
 login TEXT NOT NULL UNIQUE,
 FOREIGN KEY (program) REFERENCES Program(name),
