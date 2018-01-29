@@ -55,18 +55,18 @@ INSERT INTO Branches VALUES
   ('Design Choices','Teknisk Design'),
   ('User Experience','Teknisk  Design'),
   ('Ergonomi','Teknisk Design'),
-('Kraftlära','Teknisk Fysik'),
-('Kvantfysik', 'Teknisk Fysik'),
-('Fysik i samhället','Teknisk Fysik'),
-('Medicinsk kemi','Kemiteknik'),
-('Biologiteknik','Kemiteknik'),
-('Trolldrycker','Kemiteknik'),
-('Rördesign','Maskinteknik'),
-('Motorteknik','Maskinteknik'),
-('Hydraulik','Maskinteknik'),
-('Diskret Matematik','Teknisk Matematik'),
-('Odiskret Matematik','Teknisk Matematik'),
-('Kontinuerlig Matematik','Teknisk Matematik');
+  ('Kraftlära','Teknisk Fysik'),
+  ('Kvantfysik', 'Teknisk Fysik'),
+  ('Fysik i samhället','Teknisk Fysik'),
+  ('Medicinsk kemi','Kemiteknik'),
+  ('Biologiteknik','Kemiteknik'),
+  ('Trolldrycker','Kemiteknik'),
+  ('Rördesign','Maskinteknik'),
+  ('Motorteknik','Maskinteknik'),
+  ('Hydraulik','Maskinteknik'),
+  ('Diskret Matematik','Teknisk Matematik'),
+  ('Odiskret Matematik','Teknisk Matematik'),
+  ('Kontinuerlig Matematik','Teknisk Matematik');
 
 
 INSERT INTO BelongsTo VALUES
