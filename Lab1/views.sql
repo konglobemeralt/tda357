@@ -29,4 +29,4 @@ CREATE VIEW UnreadMandatory AS
     SELECT BelongsTo.student, MandatoryBranch.course FROM BelongsTo, MandatoryBranch
     WHERE(BelongsTo.branch = MandatoryBranch.branch) AND (MandatoryBranch.course NOT IN(SELECT Taken.course FROM Taken WHERE Taken.student = BelongsTo.student))
   );
-  
+
