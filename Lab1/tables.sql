@@ -1,5 +1,3 @@
--- noinspection SqlDialectInspectionForFile
-
 CREATE TABLE Program (
   name TEXT NOT NULL PRIMARY KEY,
   abbreviation TEXT NOT NULL
@@ -11,90 +9,90 @@ CREATE TABLE Department (
 );
 
 CREATE TABLE Hosts (
-department TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (department) REFERENCES Department(name),
-FOREIGN KEY (program) REFERENCES Program(name),
-PRIMARY KEY (department, program)
+  department TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (department) REFERENCES Department(name),
+  FOREIGN KEY (program) REFERENCES Program(name),
+  PRIMARY KEY (department, program)
 );
 
 CREATE TABLE Student(
-ssn TEXT NOT NULL PRIMARY KEY,
-name TEXT NOT NULL,
-program TEXT NOT NULL,
-login TEXT NOT NULL UNIQUE,
-FOREIGN KEY (program) REFERENCES Program(name),
-UNIQUE (ssn,program)
+  ssn TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL,
+  program TEXT NOT NULL,
+  login TEXT NOT NULL UNIQUE,
+  FOREIGN KEY (program) REFERENCES Program(name),
+  UNIQUE (ssn,program)
 );
 
 CREATE TABLE Branch(
-name TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (program) REFERENCES Program(name),
-PRIMARY KEY(name,program)
+  name TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (program) REFERENCES Program(name),
+  PRIMARY KEY(name,program)
 );
 
 CREATE TABLE BelongsTo(
-student TEXT NOT NULL,
-branch TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (student) REFERENCES Student(ssn),
-FOREIGN KEY (student,program) REFERENCES Student(ssn,program),
-FOREIGN KEY (branch,program) REFERENCES Branch(name, program)
+  student TEXT NOT NULL,
+  branch TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (student) REFERENCES Student(ssn),
+  FOREIGN KEY (student,program) REFERENCES Student(ssn,program),
+  FOREIGN KEY (branch,program) REFERENCES Branch(name, program)
 );
 
 CREATE TABLE Course(
-code TEXT NOT NULL PRIMARY KEY,
-name TEXT NOT NULL,
-credits NUMERIC NOT NULL CHECK (credits >= 0),
-department TEXT NOT NULL,
-FOREIGN KEY (department) REFERENCES Department(name)
+  code TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL,
+  credits NUMERIC NOT NULL CHECK (credits >= 0),
+  department TEXT NOT NULL,
+  FOREIGN KEY (department) REFERENCES Department(name)
 );
 
 CREATE TABLE Prerequisite(
-course TEXT NOT NULL,
-prerequisite TEXT NOT NULL,
-FOREIGN KEY (course) REFERENCES Course(code),
-FOREIGN KEY (prerequisite) REFERENCES Course(code),
-PRIMARY KEY (course,prerequisite)
+  course TEXT NOT NULL,
+  prerequisite TEXT NOT NULL,
+  FOREIGN KEY (course) REFERENCES Course(code),
+  FOREIGN KEY (prerequisite) REFERENCES Course(code),
+  PRIMARY KEY (course,prerequisite)
 );
 
 CREATE TABLE Classification(
-name TEXT NOT NULL PRIMARY KEY
+  name TEXT NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE Classified(
-course TEXT NOT NULL,
-classification TEXT NOT NULL,
-FOREIGN KEY (course) REFERENCES Course(code),
-FOREIGN KEY (classification) REFERENCES Classification(name),
-PRIMARY KEY (classification, course)
+  course TEXT NOT NULL,
+  classification TEXT NOT NULL,
+  FOREIGN KEY (course) REFERENCES Course(code),
+  FOREIGN KEY (classification) REFERENCES Classification(name),
+  PRIMARY KEY (classification, course)
 );
 
 CREATE TABLE MandatoryProgram(
-course TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (course) REFERENCES Course(code),
-FOREIGN KEY (program) REFERENCES Program(name),
-PRIMARY KEY (course,program)
+  course TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (course) REFERENCES Course(code),
+  FOREIGN KEY (program) REFERENCES Program(name),
+  PRIMARY KEY (course,program)
 );
 
 CREATE TABLE MandatoryBranch(
-course TEXT NOT NULL,
-branch TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (course) REFERENCES Course(code),
-FOREIGN KEY (branch,program) REFERENCES Branch(name,program),
-PRIMARY KEY (course, branch, program)
+  course TEXT NOT NULL,
+  branch TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (course) REFERENCES Course(code),
+  FOREIGN KEY (branch,program) REFERENCES Branch(name,program),
+  PRIMARY KEY (course, branch, program)
 );
 
 CREATE TABLE RecommendedBranch(
-course TEXT NOT NULL,
-branch TEXT NOT NULL,
-program TEXT NOT NULL,
-FOREIGN KEY (course) REFERENCES Course(code),
-FOREIGN KEY (branch,program) REFERENCES Branch(name,program),
-PRIMARY KEY (course, branch, program)
+  course TEXT NOT NULL,
+  branch TEXT NOT NULL,
+  program TEXT NOT NULL,
+  FOREIGN KEY (course) REFERENCES Course(code),
+  FOREIGN KEY (branch,program) REFERENCES Branch(name,program),
+  PRIMARY KEY (course, branch, program)
 );
 
 CREATE TABLE Registered(
@@ -134,4 +132,3 @@ CREATE TABLE WaitingList(
   PRIMARY KEY (student, course)
 
 );
-
