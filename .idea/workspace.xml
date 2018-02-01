@@ -31,8 +31,8 @@
       <file leaf-file-name="tables.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab1/tables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1625">
-              <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="488">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +41,8 @@
       <file leaf-file-name="insert.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lab1/insert.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="202" column="25" lean-forward="false" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+            <state relative-caret-position="700">
+              <caret line="193" column="25" lean-forward="false" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file leaf-file-name="views.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab1/views.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -273,7 +273,7 @@
       <workItem from="1516788840624" duration="749000" />
       <workItem from="1516789706222" duration="2149000" />
       <workItem from="1516876694948" duration="7067000" />
-      <workItem from="1517438773212" duration="2026000" />
+      <workItem from="1517438773212" duration="3766000" />
     </task>
     <task id="LOCAL-00001" summary="first try">
       <created>1516788950639</created>
@@ -408,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517480076335</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add more students taken courses">
+      <created>1517480448451</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1517480448451</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11991000" />
+    <option name="totallyTimeSpent" value="13731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -470,7 +477,8 @@
     <MESSAGE value="fixade till waitinglist" />
     <MESSAGE value="add inserts" />
     <MESSAGE value="fix classification" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix classification" />
+    <MESSAGE value="add more students taken courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more students taken courses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -548,24 +556,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab1/views.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab1/tables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1625">
-          <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+        <state relative-caret-position="488">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab1/insert.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="202" column="25" lean-forward="false" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+        <state relative-caret-position="700">
+          <caret line="193" column="25" lean-forward="false" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
           <folding />
         </state>
       </provider>
