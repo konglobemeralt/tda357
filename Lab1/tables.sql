@@ -33,7 +33,7 @@ CREATE TABLE Branch(
 );
 
 CREATE TABLE BelongsTo(
-  student TEXT NOT NULL,
+  student TEXT NOT NULL PRIMARY KEY,
   branch TEXT NOT NULL,
   program TEXT NOT NULL,
   FOREIGN KEY (student) REFERENCES Student(ssn),
