@@ -120,37 +120,36 @@ INSERT INTO Prerequisite VALUES
   ('MVE051', 'MVE045');
 
 INSERT INTO Classification VALUES
-  ('Datavetenskap'),
-  ('Matematik'),
-  ('Naturvetenskap'),
-  ('Infrastruktur och konstruktion');
+  ('Mathematics'),
+  ('Research'),
+  ('Seminar');
 
 
 INSERT INTO Classified VALUES
-  ('MVE045', 'Matematik'),
-  ('MVE051', 'Matematik'),
-  ('MVE053', 'Matematik'),
-  ('MVE061', 'Matematik'),
+  ('MVE045', 'Mathematics'),
+  ('MVE051', 'Mathematics'),
+  ('MVE053', 'Mathematics'),
+  ('MVE061', 'Mathematics'),
 
-  ('TDA541', 'Datavetenskap'),
-  ('TDA553', 'Datavetenskap'),
-  ('TDA562', 'Datavetenskap'),
-  ('TDA581', 'Datavetenskap'),
-  ('TDA532', 'Datavetenskap'),
+  ('TDA541', 'Research'),
+  ('TDA553', 'Research'),
+  ('TDA562', 'Research'),
+  ('TDA581', 'Research'),
+  ('TDA532', 'Research'),
 
-  ('ACE081', 'Infrastruktur och konstruktion'),
-  ('ACE088', 'Infrastruktur och konstruktion'),
-  ('ACE034', 'Infrastruktur och konstruktion'),
-  ('ACE032', 'Infrastruktur och konstruktion'),
+  ('ACE081', 'Seminar'),
+  ('ACE088', 'Seminar'),
+  ('ACE034', 'Seminar'),
+  ('ACE032', 'Seminar'),
 
-  ('FYS222', 'Naturvetenskap'),
-  ('FYS232', 'Naturvetenskap'),
-  ('FYS244', 'Naturvetenskap'),
-  ('FYS256', 'Naturvetenskap'),
-  ('KEM632', 'Naturvetenskap'),
-  ('KEM621', 'Naturvetenskap'),
-  ('KEM612', 'Naturvetenskap'),
-  ('KEM655', 'Naturvetenskap');
+  ('FYS222', 'Research'),
+  ('FYS232', 'Research'),
+  ('FYS244', 'Research'),
+  ('FYS256', 'Research'),
+  ('KEM632', 'Research'),
+  ('KEM621', 'Research'),
+  ('KEM612', 'Research'),
+  ('KEM655', 'Research');
 
 
 INSERT INTO MandatoryProgram VALUES
