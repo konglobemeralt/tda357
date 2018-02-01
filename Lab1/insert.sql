@@ -44,31 +44,31 @@ INSERT INTO Hosts VALUES
   ('MATEMATISKA VETENSKAPER','Teknisk Matematik');
 
 INSERT INTO Course VALUES
-  ('MVE045','Matematisk analys','7.5','MATEMATISKA VETENSKAPER'),
-  ('MVE051','Flervariabelanalys','7.5','MATEMATISKA VETENSKAPER'),
-  ('MVE053','Matematik och Människan','7.5','MATEMATISKA VETENSKAPER'),
-  ('MVE061','Linjär algebra','7.5','MATEMATISKA VETENSKAPER'),
+  ('MVE045','Matematisk analys',7.5,'MATEMATISKA VETENSKAPER'),
+  ('MVE051','Flervariabelanalys',7.5,'MATEMATISKA VETENSKAPER'),
+  ('MVE053','Matematik och Människan',7.5,'MATEMATISKA VETENSKAPER'),
+  ('MVE061','Linjär algebra',7.5,'MATEMATISKA VETENSKAPER'),
 
-  ('TDA541','Objektorienterad programmering', '7.5', 'DATA- OCH INFORMATIONSTEKNIK'),
-  ('TDA553','Funktionell programmering', '7.5', 'DATA- OCH INFORMATIONSTEKNIK'),
-  ('TDA562','Grundläggande programmering', '7.5', 'DATA- OCH INFORMATIONSTEKNIK'),
-  ('TDA581','Design och inteface', '7.5', 'DATA- OCH INFORMATIONSTEKNIK'),
-  ('TDA532','Säkerhet', '7.5', 'DATA- OCH INFORMATIONSTEKNIK'),
+  ('TDA541','Objektorienterad programmering', 7.5, 'DATA- OCH INFORMATIONSTEKNIK'),
+  ('TDA553','Funktionell programmering', 7.5, 'DATA- OCH INFORMATIONSTEKNIK'),
+  ('TDA562','Grundläggande programmering', 7.5, 'DATA- OCH INFORMATIONSTEKNIK'),
+  ('TDA581','Design och inteface', 7.5, 'DATA- OCH INFORMATIONSTEKNIK'),
+  ('TDA532','Säkerhet', 7.5, 'DATA- OCH INFORMATIONSTEKNIK'),
 
-  ('ACE081','Skissteknik', '7.5', 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
-  ('ACE088','Krokikonst', '7.5', 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
-  ('ACE034','Byggnadskunskap', '7.5', 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
-  ('ACE032','Stadsplanering', '7.5', 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
+  ('ACE081','Skissteknik', 7.5, 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
+  ('ACE088','Krokikonst', 7.5, 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
+  ('ACE034','Byggnadskunskap', 7.5, 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
+  ('ACE032','Stadsplanering', 7.5, 'ARKITEKTUR OCH SAMHÄLLSBYGGNADSTEKNIK'),
 
-  ('FYS222','Lätt fysik', '7.5', 'FYSIK'),
-  ('FYS232','Svår fysik', '7.5', 'FYSIK'),
-  ('FYS244','Väldigt svår fysik', '7.5', 'FYSIK'),
-  ('FYS256','Fysiken och jag', '7.5', 'FYSIK'),
+  ('FYS222','Lätt fysik', 7.5, 'FYSIK'),
+  ('FYS232','Svår fysik', 7.5, 'FYSIK'),
+  ('FYS244','Väldigt svår fysik', 7.5, 'FYSIK'),
+  ('FYS256','Fysiken och jag', 7.5, 'FYSIK'),
 
-  ('KEM632','Lätt Kemi', '7.5', 'KEMI'),
-  ('KEM621','Superkemi', '7.5', 'KEMI'),
-  ('KEM612','Kemimns historia', '7.5', 'KEMI'),
-  ('KEM655','Kemister i politiken', '7.5', 'KEMI');
+  ('KEM632','Lätt Kemi', 7.5, 'KEMI'),
+  ('KEM621','Superkemi', 7.5, 'KEMI'),
+  ('KEM612','Kemimns historia', 7.5, 'KEMI'),
+  ('KEM655','Kemister i politiken', 7.5, 'KEMI');
 
 
 INSERT INTO Branch VALUES

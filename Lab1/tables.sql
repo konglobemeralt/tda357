@@ -46,7 +46,7 @@ FOREIGN KEY (branch,program) REFERENCES Branch(name, program)
 CREATE TABLE Course(
 code TEXT NOT NULL PRIMARY KEY,
 name TEXT NOT NULL,
-credits TEXT NOT NULL,
+credits NUMERIC NOT NULL CHECK (credits >= 0),
 department TEXT NOT NULL,
 FOREIGN KEY (department) REFERENCES Department(name)
 );
