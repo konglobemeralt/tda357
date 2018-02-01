@@ -30,3 +30,52 @@ CREATE VIEW UnreadMandatory AS
     WHERE(BelongsTo.branch = MandatoryBranch.branch) AND (MandatoryBranch.course NOT IN(SELECT Taken.course FROM Taken WHERE Taken.student = BelongsTo.student))
   );
 
+/* create helper views*/
+
+CREATE VIEW totalCredits AS
+  SELECT PassedCourses.student, SUM(PassedCourses.credits) AS totalCredits
+  FROM PassedCourses
+  GROUP BY PassedCourses.student;
+
+CREATE VIEW mandatoryLeft AS
+  SELECT Student.ssn AS Student, COUNT(UnreadMandatory.course) AS mandatoryLeft
+  FROM Student LEFT JOIN UnreadMandatory
+      ON UnreadMandatory.student = Student.ssn
+  GROUP BY Student.ssn;
+
+CREATE VIEW seminarCourses AS
+  SELECT PassedCourses.student, COUNT (PassedCourses.credits) AS seminarCourses
+  FROM PassedCourses
+    LEFT JOIN Classified ON PassedCourses.course = Classified.course
+  WHERE Classified.classification = 'Seminar'
+  GROUP BY PassedCourses.student;
+
+CREATE VIEW mathCredits AS
+  SELECT PassedCourses.student, SUM (PassedCourses.credits) AS mathCredits
+  FROM PassedCourses
+    LEFT JOIN Classified ON PassedCourses.course = Classified.course
+  WHERE Classified.classification = 'Mathematics'
+  GROUP BY PassedCourses.student;
+
+CREATE VIEW researchCredits AS
+  SELECT PassedCourses.student, SUM (PassedCourses.credits) AS researchCredits
+  FROM PassedCourses
+    LEFT JOIN Classified ON PassedCourses.course = Classified.course
+  WHERE Classified.classification = 'Research'
+  GROUP BY PassedCourses.student;
+
+CREATE VIEW PathToGraduation AS
+  SELECT Student.ssn AS student,
+         COALESCE(totalCredits.totalCredits,0) as totalCredits,
+         mandatoryLeft.mandatoryLeft as mandatoryLeft,
+         COALESCE (seminarCourses.seminarCourses,0) as seminarCourses,
+         COALESCE(mathCredits.mathCredits,0) as mathCredits,
+         COALESCE(researchCredits.researchCredits,0) as researchCredits,
+         CASE WHEN mandatoryLeft<1 AND mathCredits >= 30 AND researchCredits >1 AND
+                   seminarCourses >= 2 THEN 'True' ELSE 'False' END as status
+  FROM Student
+    LEFT JOIN totalCredits on Student.ssn = totalCredits.student
+    LEFT JOIN mandatoryLeft on Student.ssn = mandatoryLeft.student
+    LEFT JOIN seminarCourses on Student.ssn = seminarCourses.student
+    LEFT JOIN mathCredits on Student.ssn = mathCredits.student
+    LEFT JOIN researchCredits on Student.ssn = researchCredits.student;
