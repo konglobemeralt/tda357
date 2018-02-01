@@ -97,7 +97,6 @@ INSERT INTO BelongsTo VALUES
   ('199605015678','Software Engineering','Informationsteknik'),
   ('199606019123','Formella Språk','Informationsteknik'),
 
-  ('199508023322','Motorteknik','Maskinteknik'),
   ('199509029876','Rördesign','Maskinteknik'),
   ('199510025432','Hydraulik','Maskinteknik'),
   ('199511021987','Hydraulik','Maskinteknik'),
@@ -191,6 +190,7 @@ INSERT INTO Taken VALUES
   ('199607097733','TDA581', '4'),
   ('199607097733','TDA553', '3'),
   ('199607097733','TDA541', '5'),
+  ('199607097733','TDA532', '5'),
   ('199607097733','MVE045', '5'),
   ('199607097733','MVE051', '5'),
   ('199607097733','MVE061', '4'),
@@ -209,16 +209,14 @@ INSERT INTO Taken VALUES
 
 INSERT INTO LimitedCourse VALUES
   ('ACE032', 65),
-  ('KEM665',42),
+  ('KEM655',42),
   ('ACE034',53);
 INSERT INTO WaitingList VALUES
   ('199207137777','ACE032', 2),
   ('199510025432','ACE032', 3),
   ('199508023322','ACE032', 6),
-  ('199704021111','KEM665', 4),
-  ('199705022222','KEM665', 7),
-
-
-  ('199706023333','KEM665', 9),
+  ('199704021111','KEM655', 4),
+  ('199705022222','KEM655', 7),
+  ('199706023333','KEM655', 9),
   ('199511021987','ACE034', 5);
 

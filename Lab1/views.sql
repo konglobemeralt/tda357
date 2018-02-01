@@ -8,15 +8,15 @@ CREATE VIEW FinishedCourses AS
   WHERE Taken.course = Course.code;
 
 CREATE VIEW Registrations AS
-  SELECT Registered.student, Registered.course, 'Registered' AS Status
+  SELECT Registered.student, Registered.course, 'registered' AS Status
   FROM Registered
   UNION
-  SELECT WaitingList.student, WaitingList.course, 'Waiting' AS Status
+  SELECT WaitingList.student, WaitingList.course, 'waiting' AS Status
   FROM WaitingList;
 
 
 CREATE VIEW PassedCourses AS
-  SELECT Taken.student, Taken.course, Taken.grade, Course.credits
+  SELECT Taken.student, Taken.course, Course.credits
   FROM Taken, Course
   WHERE Taken.course = Course.code AND TAKEN.grade <> 'U';
 
@@ -69,8 +69,8 @@ CREATE VIEW PathToGraduation AS
          COALESCE (seminarCourses.seminarCourses,0) as seminarCourses,
          COALESCE(mathCredits.mathCredits,0) as mathCredits,
          COALESCE(researchCredits.researchCredits,0) as researchCredits,
-         CASE WHEN mandatoryLeft<1 AND mathCredits >= 30 AND researchCredits >1 AND
-                   seminarCourses >= 2 THEN 'True' ELSE 'False' END as status
+         COALESCE( mandatoryLeft<1 AND mathCredits >= 30 AND researchCredits >1 AND
+                   seminarCourses >= 2,FALSE) as status
   FROM Student
     LEFT JOIN totalCredits on Student.ssn = totalCredits.student
     LEFT JOIN mandatoryLeft on Student.ssn = mandatoryLeft.student
